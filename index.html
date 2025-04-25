@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>📋 Task Manager</h1>
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Enter a new task..." required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="controls">
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button id="sort-btn">Sort by Newest</button>
+    </div>
+
+    <ul id="task-list"></ul>
+    <div id="task-alert" class="task-alert"></div>
+  </div>
+
+  <!-- Delete Modal -->
+  <div id="delete-modal" class="modal hidden">
+    <div class="modal-content">
+      <p>Are you sure you want to delete this task?</p>
+      <div class="modal-buttons">
+        <button id="confirm-delete" class="delete-btn">Yes, Delete</button>
+        <button id="cancel-delete" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
